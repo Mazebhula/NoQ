@@ -2,6 +2,7 @@ package com.NoQ.noqueue.controller;
 
 import com.NoQ.noqueue.model.Queued;
 import com.NoQ.noqueue.service.QueueService;
+import com.NoQ.noqueue.service.WhatsAppService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

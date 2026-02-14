@@ -17,6 +17,8 @@ public class QueueService {
     int wait = 5;
     @Autowired
     QueueRepo repo;
+    @Autowired
+    private WhatsAppService whatsAppService;
 
     public List<Queued> showQ(){return repo.findAll();}
 
@@ -26,6 +28,7 @@ public class QueueService {
 
         Queued Q = new Queued(QNum,Tts);
         repo.save(Q);
+        whatsAppService.sendMessage("0795687287","test");
         return Q;
     }
     private Duration tts(int QNum){
